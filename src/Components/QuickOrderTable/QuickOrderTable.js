@@ -32,61 +32,61 @@ const TABS = [
   },
 ];
  
-const TABLE_HEAD = ["Products", "MRP", "Discounted Price", "QTY", "Total"];
+const TABLE_HEAD = ["Code","Products", "MRP", "Our Price", "QTY", "Total"];
  
 const TABLE_ROWS = [
   {
     img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-3.jpg",
-    name: "John Michael",
-    email: "john@creative-tim.com",
-    job: "Manager",
-    org: "Organization",
-    online: true,
-    date: "23/04/18",
+    name: "dfgsgxgffgj fzghsrtghg",
+    mrp: "100",
+    price: "40",
+    qty: "2",
+    total: "80",
+    num: "1",
   },
   {
     img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-2.jpg",
     name: "Alexa Liras",
-    email: "alexa@creative-tim.com",
-    job: "Programator",
-    org: "Developer",
-    online: false,
-    date: "23/04/18",
+    mrp: "100",
+    price: "40",
+    qty: "2",
+    total: "80",
+    num: "2",
   },
   {
     img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-1.jpg",
     name: "Laurent Perrier",
-    email: "laurent@creative-tim.com",
-    job: "Executive",
-    org: "Projects",
-    online: false,
-    date: "19/09/17",
+    mrp: "100",
+    price: "40",
+    qty: "2",
+    total: "80",
+    num: "3",
   },
   {
     img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
     name: "Michael Levi",
-    email: "michael@creative-tim.com",
-    job: "Programator",
-    org: "Developer",
-    online: true,
-    date: "24/12/08",
+    mrp: "100",
+    price: "40",
+    qty: "2",
+    total: "80",
+    num: "4",
   },
   {
     img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-5.jpg",
     name: "Richard Gran",
-    email: "richard@creative-tim.com",
-    job: "Manager",
-    org: "Executive",
-    online: false,
-    date: "04/10/21",
+    mrp: "100",
+    price: "40",
+    qty: "2",
+    total: "80",
+    num: "5",
   },
 ];
  
 export function QuickOrderTable() {
   return (
-    <Card className="h-full w-full">
+    <Card className="h-full responsive-Card mx-auto max-w-screen-xl">
       <CardHeader floated={false} shadow={false} className="rounded-none">
-        <div className="mb-8 flex items-center justify-between gap-8">
+        <div className="mb-8 flex items-center justify-between gap-8 ">
           <div>
             <Typography variant="h5" color="blue-gray">
               Products
@@ -105,7 +105,7 @@ export function QuickOrderTable() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <Tabs value="all" className="w-full md:w-max">
+          <Tabs value="all" className="w-full sm:w-max">
             <TabsHeader>
               {TABS.map(({ label, value }) => (
                 <Tab key={value} value={value}>
@@ -144,17 +144,28 @@ export function QuickOrderTable() {
           </thead>
           <tbody>
             {TABLE_ROWS.map(
-              ({ img, name, email, job, org, online, date }, index) => {
+              ({ img, name,  mrp, price, qty, total, num }, index) => {
                 const isLast = index === TABLE_ROWS.length - 1;
                 const classes = isLast
-                  ? "p-4"
-                  : "p-4 border-b border-blue-gray-50";
+                  ? "sm:p-4 p-1"
+                  : "sm:p-4 p-1 border-b border-blue-gray-50";
  
                 return (
                   <tr key={name}>
                     <td className={classes}>
-                      <div className="flex items-center gap-3">
-                        <Avatar src={img} alt={name} size="sm" />
+                      <div className="flex flex-col text-center">
+                        <Typography
+                          variant="small"
+                          color="blue-gray"
+                          className="font-normal"
+                        >
+                          {num}
+                        </Typography>
+                      </div>
+                    </td>
+                    <td className={classes}>
+                      {/* <div className="flex items-center gap-3">
+                        <Avatar src={img} alt={name} size="sm" /> */}
                         <div className="flex flex-col">
                           <Typography
                             variant="small"
@@ -163,59 +174,52 @@ export function QuickOrderTable() {
                           >
                             {name}
                           </Typography>
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal opacity-70"
-                          >
-                            {email}
-                          </Typography>
-                        </div>
+                        {/* </div> */}
                       </div>
                     </td>
                     <td className={classes}>
-                      <div className="flex flex-col">
+                      <div className="flex flex-col text-center">
                         <Typography
                           variant="small"
                           color="blue-gray"
                           className="font-normal"
                         >
-                          {job}
+                          {mrp}
                         </Typography>
+                      </div>
+                    </td>
+                    <td className={classes}>
+                      <div className="flex flex-col text-center">
                         <Typography
                           variant="small"
                           color="blue-gray"
-                          className="font-normal opacity-70"
+                          className="font-normal"
                         >
-                          {org}
+                          {price}
                         </Typography>
                       </div>
                     </td>
                     <td className={classes}>
-                      <div className="w-max">
-                        <Chip
-                          variant="ghost"
-                          size="sm"
-                          value={online ? "online" : "offline"}
-                          color={online ? "green" : "blue-gray"}
-                        />
-                      </div>
-                    </td>
-                    <td className={classes}>
+                    <div className="flex flex-col">
                       <Typography
                         variant="small"
                         color="blue-gray"
                         className="font-normal"
                       >
-                        {date}
+                        {qty}
                       </Typography>
+                      </div>
                     </td>
-                    <td className={classes}>
-                      <Tooltip content="Edit User">
-                        <IconButton variant="text">
-                          <PencilIcon className="h-4 w-4" />
-                        </IconButton>
-                      </Tooltip>
+                    <td className={`${classes} hidden sm:block`} >
+                    <div className="flex flex-col text-center"> 
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
+                      >
+                        {total}
+                      </Typography>
+                      </div>
                     </td>
                   </tr>
                 );
