@@ -122,8 +122,8 @@ export function QuickOrderTable() {
           </div>
         </div>
       </CardHeader>
-      <CardBody className="overflow-scroll px-0">
-        <table className="mt-4 w-full min-w-max table-auto text-left">
+      <CardBody className="px-0 overflow-x-auto">
+        <table className="mt-4 w-full min-w-full table-auto text-left">
           <thead>
             <tr>
               {TABLE_HEAD.map((head) => (
