@@ -7,7 +7,7 @@ import Homepage from "./Components/Homepage/Homepage";
 function App() {
   return (
         <Layout>
-     {/* <QuickOrderTable /> */}
+     {/* <QuickOrderTable />  */}
     {/* <ContactUs /> */}
     <Homepage />
      </Layout>
