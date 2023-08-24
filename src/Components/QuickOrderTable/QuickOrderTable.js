@@ -32,7 +32,7 @@ const TABS = [
   },
 ];
  
-const TABLE_HEAD = ["Member", "Function", "Status", "Employed", ""];
+const TABLE_HEAD = ["Products", "MRP", "Discounted Price", "QTY", "Total"];
  
 const TABLE_ROWS = [
   {
@@ -89,10 +89,10 @@ export function QuickOrderTable() {
         <div className="mb-8 flex items-center justify-between gap-8">
           <div>
             <Typography variant="h5" color="blue-gray">
-              Members list
+              Products
             </Typography>
             <Typography color="gray" className="mt-1 font-normal">
-              See information about all members
+              See information about all products
             </Typography>
           </div>
           <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
