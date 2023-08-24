@@ -1,7 +1,16 @@
-export default function App() {
+import React from "react";
+import { NavbarDefault } from './Components/Header/Navbar'; // Adjust the path based on your file structure
+import { QuickOrderTable } from "./Components/QuickOrderTable/QuickOrderTable";
+import { FooterWithSocialLinks } from "./Components/Footer/Footer";
+
+function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <>
+      <NavbarDefault />
+      <QuickOrderTable />
+      <FooterWithSocialLinks />
+    </>
+  );
 }
+
+export default App;

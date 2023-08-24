@@ -70,7 +70,7 @@ export function NavbarDefault() {
           href="#"
           className="mr-4 cursor-pointer py-1.5 font-medium"
         >
-          Material Tailwind
+         Kickblues Technologies
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button variant="gradient" size="sm" className="hidden lg:inline-block">
