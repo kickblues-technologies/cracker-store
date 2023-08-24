@@ -25,7 +25,7 @@ export function NavbarDefault() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="www.kickblues.com" className="flex items-center">
           Pages
         </a>
       </Typography>
@@ -35,7 +35,7 @@ export function NavbarDefault() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="kickblues" className="flex items-center">
           Account
         </a>
       </Typography>
@@ -45,7 +45,7 @@ export function NavbarDefault() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="kickblues" className="flex items-center">
           Blocks
         </a>
       </Typography>
@@ -55,7 +55,7 @@ export function NavbarDefault() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="kickblues" className="flex items-center">
           Docs
         </a>
       </Typography>
