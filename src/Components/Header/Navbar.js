@@ -25,8 +25,18 @@ export function NavbarDefault() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="www.kickblues.com" className="flex items-center">
-          Pages
+        <a href="/order" className="flex items-center">
+          Order Now
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="/payments" className="flex items-center">
+          Payment Details
         </a>
       </Typography>
       <Typography
@@ -36,7 +46,7 @@ export function NavbarDefault() {
         className="p-1 font-normal"
       >
         <a href="kickblues" className="flex items-center">
-          Account
+          Safety Guidelines
         </a>
       </Typography>
       <Typography
@@ -46,17 +56,7 @@ export function NavbarDefault() {
         className="p-1 font-normal"
       >
         <a href="kickblues" className="flex items-center">
-          Blocks
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="kickblues" className="flex items-center">
-          Docs
+          FAQ
         </a>
       </Typography>
     </ul>
@@ -67,7 +67,7 @@ export function NavbarDefault() {
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
-          href="#"
+          href="/"
           className="mr-4 cursor-pointer py-1.5 font-medium"
         >
          Kickblues Technologies

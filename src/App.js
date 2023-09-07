@@ -1,17 +1,12 @@
-import React from "react";
-import Layout from "./Components/Layout";
-import { QuickOrderTable } from "./Components/QuickOrderTable/QuickOrderTable";
-import ContactUs from "./Components/ContactUs/ContactUs";
-import Homepage from "./Components/Homepage/Homepage";
+// App.js
+import React from 'react';
+import Routes from './Components/Routes/Routes';
 
 function App() {
   return (
-        <Layout>
-     {/* <QuickOrderTable />  */}
-    {/* <ContactUs /> */}
-    <Homepage />
-     </Layout>
-     
+    <div className="App">
+      <Routes /> {/* Render your Routes component here */}
+    </div>
   );
 }
 

@@ -9,6 +9,7 @@ const Homepage = () => {
         alt="nature image"
       />
       <Timer />
+     
       </div>
 
 
